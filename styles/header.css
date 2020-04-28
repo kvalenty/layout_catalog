@@ -1,0 +1,54 @@
+.header {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 50px; }
+  .header__logo {
+    height: 40px;
+    width: 40px; }
+  .header .nav__list {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+    height: 60px; }
+  .header .nav__items:not(:last-child) {
+    margin-right: 20px; }
+  .header .nav__link {
+    position: relative;
+    padding: 23px 0;
+    font-family: roboto, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000; }
+  .header .nav__link:hover {
+    color: #00acdc; }
+  .header .nav .is-active {
+    color: #00acdc; }
+  .header .nav .is-active::after {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 8px;
+    background-color: #00acdc; }
+
+/*# sourceMappingURL=header.css.map */
