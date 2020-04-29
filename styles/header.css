@@ -37,18 +37,18 @@
     text-decoration: none;
     text-transform: uppercase;
     color: #000; }
+    .header .nav__link--active {
+      color: #00acdc; }
+    .header .nav__link--active::after {
+      position: absolute;
+      content: "";
+      height: 4px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border-radius: 8px;
+      background-color: #00acdc; }
   .header .nav__link:hover {
     color: #00acdc; }
-  .header .nav .is-active {
-    color: #00acdc; }
-  .header .nav .is-active::after {
-    position: absolute;
-    content: "";
-    height: 4px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    border-radius: 8px;
-    background-color: #00acdc; }
 
 /*# sourceMappingURL=header.css.map */
