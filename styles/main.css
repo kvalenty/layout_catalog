@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+body {
+  margin: 0;
+  font-size: 11px;
+  font-family: Roboto, sans-serif;
+  color: #000; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0; }
+
 .header {
   background: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -16,41 +32,55 @@
   .header__logo {
     height: 40px;
     width: 40px; }
-  .header .nav__list {
-    padding: 0;
+  .header .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    list-style: none;
-    height: 60px; }
-  .header .nav__items:not(:last-child) {
-    margin-right: 20px; }
-  .header .nav__link {
-    position: relative;
-    padding: 23px 0;
-    font-family: roboto, sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 60px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000; }
-    .header .nav__link--active {
+    list-style: none; }
+    .header .nav__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      list-style: none;
+      margin: 23px 0; }
+    .header .nav__items:not(:last-child) {
+      margin-right: 20px;
+      -webkit-transition: margin-right 0.5s;
+      transition: margin-right 0.5s; }
+      @media screen and (max-width: 960px) {
+        .header .nav__items:not(:last-child) {
+          margin-right: 10px; } }
+      @media screen and (max-width: 860px) {
+        .header .nav__items:not(:last-child) {
+          margin: 5px 0; } }
+    .header .nav__link {
+      position: relative;
+      padding: 23px 0;
+      font-family: Roboto, sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000; }
+      .header .nav__link--active {
+        color: #00acdc; }
+      .header .nav__link--active::after {
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-radius: 8px;
+        background-color: #00acdc; }
+    .header .nav__link:hover {
       color: #00acdc; }
-    .header .nav__link--active::after {
-      position: absolute;
-      content: "";
-      height: 4px;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      border-radius: 8px;
-      background-color: #00acdc; }
-  .header .nav__link:hover {
-    color: #00acdc; }
 
 .card {
   display: -webkit-box;
@@ -64,7 +94,6 @@
       -ms-flex-align: center;
           align-items: center;
   width: 200px;
-  margin: 0 48px 50px 0;
   background: #fff;
   border: 1px solid #f3f3f3;
   -webkit-box-sizing: border-box;
@@ -136,13 +165,14 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px; }
   .price__text {
-    line-height: 14px; }
-  .price__sum--font {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 19px; }
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px; }
 
 .btn {
   width: 170px;
@@ -156,38 +186,30 @@
   background: #00acdc;
   border-radius: 5px;
   border: 0; }
-  .btn :hover {
+  .btn:hover {
     color: #00acdc;
     background: #fff;
     border: 1px solid #00acdc; }
 
 .main {
   background: #fff;
-  margin-top: 50px; }
+  margin: 50px 0; }
 
 .wrapper {
-  width: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .wrapper :nth-child(4n) {
-    margin-right: 0; }
-
-body {
-  margin: 0;
-  font-size: 11px;
-  font-family: roboto, sans-serif;
-  color: #000; }
-
-p,
-ul {
-  margin: 0;
-  padding: 0; }
+  grid-gap: 50px 48px;
+  padding: 0 12px; }
+  @media screen and (max-width: 1024px) {
+    .wrapper {
+      grid-template-columns: repeat(auto-fill, 200px); } }
 
 /*# sourceMappingURL=main.css.map */
