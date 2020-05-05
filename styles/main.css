@@ -79,8 +79,13 @@ li {
         left: 0;
         border-radius: 8px;
         background-color: #00acdc; }
-    .header .nav__link:hover {
-      color: #00acdc; }
+      .header .nav__link:visited {
+        color: #000; }
+      .header .nav__link:focus {
+        color: #00acdc;
+        outline: none; }
+      .header .nav__link:hover {
+        color: #00acdc; }
 
 .card {
   display: -webkit-box;
@@ -186,10 +191,11 @@ li {
   background: #00acdc;
   border-radius: 5px;
   border: 0; }
-  .btn:hover {
+  .btn:focus, .btn:hover {
     color: #00acdc;
     background: #fff;
-    border: 1px solid #00acdc; }
+    border: 1px solid #00acdc;
+    outline: none; }
 
 .main {
   background: #fff;
